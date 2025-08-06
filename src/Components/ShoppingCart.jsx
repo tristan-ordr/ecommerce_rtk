@@ -25,7 +25,6 @@ const ShoppingCart = () => {
     <>
     <div className="shopping-cart">
       <h2 className="shopping-cart-title">Shopping Cart</h2>
-      <div>{totalAmount ? <div>'The total amount is {totalAmount}</div> : ''}</div>
       <ul className="cart-items">
         {cartItems.map(item => (
             <li key={item.id} className="cart-item">
@@ -40,6 +39,7 @@ const ShoppingCart = () => {
         ))}
       </ul>
       <button className="clear-cart-btn" onClick={handleClearCart}>Clear Cart</button>
+      <div>{totalAmount ? <div>'The total amount is {totalAmount}</div> : ''}</div>
     </div>
     </>
   );
