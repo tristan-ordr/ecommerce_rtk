@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 const SuperCoin = () => {
     const [superCoins, setSuperCoins] = React.useState(0);
     const cartItems = useSelector(state => state.cart.cartItems);
-    const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity));
+    const totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
 
     useEffect( () => {
         if (totalAmount >= 100 && totalAmount < 200) {
