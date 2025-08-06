@@ -7,11 +7,11 @@ const ProductList = () => {
     const dispatch = useDispatch();
     const cartItems = useSelector(state => state.cart.cartItems); // Get cart items globally
 
-  const products = [
-    { id: 1, name: 'Product A', price: 60 },
-    { id: 2, name: 'Product B', price: 75 },
-    { id: 3, name: 'Product C', price: 30 },
-  ];
+    const products = [
+        { id: 1, name: 'Product A', price: 60 },
+        { id: 2, name: 'Product B', price: 75 },
+        { id: 3, name: 'Product C', price: 30 },
+    ];
 
     const handleAddToCart = product => {
         dispatch(addItemToCart(product));// Add product to cart
