@@ -5,7 +5,11 @@ const initialState = {
 };
 
 const CartSlice = createSlice({
- 
+    name: 'cart',
+    initialState,
+    reducers: {
+
+    }
 });
 
 
